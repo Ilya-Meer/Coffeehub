@@ -27,7 +27,10 @@ var coffeeshopRoutes = require('./routes/coffeeshops'),
 
 
   // APP CONFIG
-mongoose.connect("mongodb://localhost/coffeehub");
+// mongoose.connect("mongodb://localhost/coffeehub");
+mongoose.connect("mongodb://IlyaMeer:lobejune18@ds261429.mlab.com:61429/coffeehub")
+
+
 
 app.use(express.static('public'));
 app.use(methodOverride("_method")); 
