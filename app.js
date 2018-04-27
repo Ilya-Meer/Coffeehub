@@ -11,7 +11,7 @@ var express                   = require('express'),
     Coffeeshop                = require('./models/coffeeshop'),
     Comment                   = require('./models/comment'),
     User                      = require('./models/user'),
-    seedDB                    = require('./seeds'),
+    // seedDB                    = require('./seeds'),
     middleware                = require('./middleware');
 
 var app = express();
