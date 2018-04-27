@@ -1,0 +1,26 @@
+<% include ../partials/header.ejs %>
+
+
+<header>
+  <h1>Browse coffee shops near you!</h1>
+  <div class="link">
+    <a href="/coffeeshops/new">Add a new coffee shop!</a>
+  </div>
+</header>
+
+<div class="shop-grid">
+    <% coffeeshops.forEach(function(shop){ %>
+      <div class="shop">
+        <p> <%= shop.name  %>  </p>
+        <div class="shop-img-wrapper">
+          <img src="<%= shop.image %>" alt="">
+        </div>
+        <p class="more-info-link-wrapper">
+          <a href=" /coffeeshops/<%= shop._id %>" class="more-info-link">More Info</a>
+        </p>
+      </div>
+    <%  })   %>    
+</div>
+
+
+<% include ../partials/footer.ejs %>

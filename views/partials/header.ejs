@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coffee Hub</title>
+  <link rel="stylesheet" href="/style.css ">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+</head>
+<body>
+  
+<nav>
+  <div class="branding">
+    <a href="/">Coffee Hub</a>
+  </div>
+  <div class="nav-links">
+    <div class="menu">
+      <span>&#9776;</span>
+    </div>
+    <ul>
+      <% if (currentUser) {  %>
+          <li>Currently logged in as <%= currentUser.username %></li>
+          <li><a href="/logout">Log Out</a></li>
+      <% } else {    %>
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/register">Sign Up</a></li>
+      <% }     %>
+      
+    </ul>
+  </div>
+</nav>
+
+<% if (error && error.length > 0) {   %>
+  <div class="error-message">
+    <h2><%= error %></h2> 
+  </div>
+<% }   %>
+
+<% if (success && success.length > 0) {   %>
+  <div class="success-message">
+    <h2><%= success %></h2> 
+  </div>
+<% }   %>

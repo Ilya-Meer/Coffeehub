@@ -1,0 +1,102 @@
+<% include ../partials/header %>
+ 
+<div class="site-wrapper">
+  <aside class="sidebar">
+    <div id="map" class="map"></div>
+  
+  </aside>
+  
+  <main>
+    <section class="shop-info">
+      <div class="shop-img-wrapper-individual">
+          <img src="<%= coffeeshop.image %>" alt="Picture of a coffeeshop logo">
+      </div>
+          
+      <h1> <%= coffeeshop.name %>  </h1 >
+      <p> <%= coffeeshop.description %>  </p>
+      <p> <em>Submitted by <%= coffeeshop.author.username %> </em></p>
+
+      <% if (currentUser && coffeeshop.author.id.equals(currentUser._id)) {  %>
+        <div class="button-wrapper">
+          <div class="edit-button">
+            <a href="/coffeeshops/<%= coffeeshop._id %>/edit">Edit</a>
+          </div>
+    
+          <form class="delete-button" action="/coffeeshops/<%= coffeeshop._id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+          </form>
+        </div>
+
+      <% }     %>
+
+    </section>
+      
+      
+      <section class="comment-wrapper">
+        <p class="comment-button">
+           <a href="/coffeeshops/<%= coffeeshop._id %>/comments/new">Add a Comment!</a>
+        </p>
+      
+        <div class="comments">
+          <% coffeeshop.comments.forEach(function(comment){   %>
+        
+            <div class="comment"> 
+              <p class="author"><%= comment.author.username %></p>
+              <p><%= comment.text %></p>
+
+            <% if (currentUser && comment.author.id.equals(currentUser._id)) {  %>
+
+              <div class="comment-button-wrapper">
+                <a href="/coffeeshops/<%= coffeeshop._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                <form class="delete-comment-button" action="/coffeeshops/<%= coffeeshop._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button>Delete</button>
+                </form>
+              </div>
+
+            <% }  %>
+        
+            </div>
+            
+          <% })   %>
+        </div>
+      </section>
+
+  </main>
+  
+
+</div>  
+
+
+
+
+
+<script>
+    function initMap() {
+      var lat = <%= coffeeshop.lat %>;
+      var lng = <%= coffeeshop.lng %>;
+      var center = {lat: lat, lng: lng };
+      var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: center,
+          scrollwheel: false
+      });
+      var contentString = `
+        <strong><%= coffeeshop.name %><br />
+        <%= coffeeshop.location %></strong>
+        <p><%= coffeeshop.description %></p>
+      `
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+      var marker = new google.maps.Marker({
+          position: center,
+          map: map
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtMWeioULnsd9oB3pg0e-kvCyMaJdEkfY&callback=initMap"></script>
+
+<% include ../partials/footer %>

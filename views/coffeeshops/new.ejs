@@ -1,0 +1,21 @@
+ <% include ../partials/header %>
+ 
+ 
+<header class="new-shop-header">
+  <h1>Create a new coffeshop!</h1>
+</header>
+
+<form class="form" action="/coffeeshops" method="POST">
+  <input type="text" name="name" placeholder="name">
+  <input type="text" name="image" placeholder="image url">
+  <input type="text" name="description" placeholder="description">
+  <input class="location" type="text" name="location" id="location" placeholder="location e.g Yosemite National Park, CA">
+  <button>Add Shop</button>
+</form>
+
+<div class="shop-link">
+  <a href="/coffeeshops">Go Back</a>
+</div>
+
+
+<% include ../partials/footer %>

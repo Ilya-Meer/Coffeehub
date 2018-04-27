@@ -1,0 +1,83 @@
+body {
+  // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('coffee-shop-yourstruly.jpg');
+  color: #fff;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 5rem 20px;
+    background: rgba(180, 180, 180, 0.8);
+    font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
+    text-align: center;
+
+
+    h1 {
+      padding: 0 20px;
+      @media #{$tablet} {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .link {
+    margin: 2rem auto;
+    padding: 20px;
+    a {
+      padding: 10px;
+      background: #fff;
+      color: #454545;
+      text-decoration: none;
+      transition: 0.2s;
+
+      &:hover {
+        color: #fff;
+        background: #454545;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .shop-grid {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+
+    .shop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(180, 180, 180, 0.8);
+
+      p {
+        padding: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: $font-main;
+      }
+    }
+    .shop-img-wrapper {
+      padding: 20px;
+      img {
+        width: 200px;
+      }
+    }
+
+    .more-info-link-wrapper {
+      margin: 2rem 0;
+    }
+    .more-info-link {
+      padding: 15px 30px;
+      color: white;
+      background-color: #009adc;
+      border-radius: 2px;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+ 
+ 
+<header class="new-shop-header">
+  <h1>Edit <%= coffeeshop.name %></h1>
+</header>
+
+<form class="form" action="/coffeeshops/<%= coffeeshop._id %>?_method=PUT" method="POST">
+  <input type="text" name="coffeeshop[name]" placeholder="name" value="<%= coffeeshop.name %>">
+  <input type="text" name="coffeeshop[image]" placeholder="image url" value="<%= coffeeshop.image %>">
+  <input type="text" name="coffeeshop[description]" placeholder="description" value="<%= coffeeshop.description %>">
+  <input class="location" type="text" name="location" id="location" value="<%= coffeeshop.location %>">
+  <button>Submit Changes</button>
+</form>
+
+<div class="shop-link">
+  <a href="/coffeeshops">Go Back</a>
+</div>
+
+
+<% include ../partials/footer %>
+
+
+

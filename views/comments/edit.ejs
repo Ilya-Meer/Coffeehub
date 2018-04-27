@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+ 
+ 
+<header class="new-shop-header">
+  <h1>Edit Comment </h1>
+</header>
+
+<form class="form" action="/coffeeshops/<%= coffeeshop_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+  <input type="text" name="comment[text]" placeholder="text" value="<%= comment.text %>">
+  <button>Edit Comment </button>
+</form>
+
+
+
+<% include ../partials/footer %>

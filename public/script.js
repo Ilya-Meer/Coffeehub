@@ -1,0 +1,1 @@
+var menu=document.querySelector(".menu span"),navLinks=document.querySelector(".nav-links ul"),overlay=document.querySelector(".overlay"),opaque=!0;menu.addEventListener("click",function(){opaque=!opaque,navLinks.style.display=!0===opaque?"none":"flex"});

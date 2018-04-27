@@ -1,0 +1,41 @@
+header.new-shop-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 5rem 20px;
+  font-family: $font-main;
+  background: rgba(180, 180, 180, 0.8);
+  text-align: center;
+
+  h1 {
+    padding: 0 20px;
+    @media #{$tablet} {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.shop-link {
+  display: flex;
+  justify-content: center;
+  font-family: $font-main;
+  padding: 20px;
+  a {
+    margin-right: 9rem;
+    padding: 10px;
+    background: #fff;
+    color: #454545;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 2px;
+
+    &:hover {
+      color: #fff;
+      background: #454545;
+      transition: 0.2s;
+    }
+  }
+}
