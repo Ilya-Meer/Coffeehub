@@ -74,7 +74,9 @@ app.use(commentRoutes);
 app.use(coffeeshopRoutes);
 
 
-app.listen(3015, function(){
+var port = process.env.PORT || 3015;
+
+app.listen(port, function(){
   console.log("Coffeehub is up!");
 })
 
