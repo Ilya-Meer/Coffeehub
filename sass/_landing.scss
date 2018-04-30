@@ -1,28 +1,20 @@
-html {
-  min-height: 100vh;
-}
-body {
-  // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('coffee-shop-yourstruly.jpg');
-  // background: #360049;
-
-
-  // background: #355C7D;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.landing {
+    // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('coffee-shop-yourstruly.jpg');
+    // background: #360049;
   
-  // background: #000000;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to right, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  min-height: 100%;
-  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(100, 100, 100, 0.2)), url('coffeeshop_blur.jpg');
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-size: cover, cover; 
-  color: #fff;
-  @media #{$tablet} {
-    height: auto;
-  }
-
+  
+    // background: #355C7D;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    // background: #000000;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // min-height: 100%;
+    // @media #{$tablet} {
+    //   height: auto;
+    // }
+  
   header {
     display: flex;
     flex-direction: column;
@@ -31,9 +23,11 @@ body {
     width: 70%;
     margin: 2rem auto;
     padding: 5rem 20px;
-    background: rgba(128, 128, 128, 0.8);
-    font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
+    font-family: $font-main;
     text-align: center;
+    @media #{$tablet} {
+      margin: 5rem auto;
+    }
 
     h1 {
       padding: 0 20px;

@@ -27,10 +27,8 @@ var coffeeshopRoutes = require('./routes/coffeeshops'),
 
 
   // APP CONFIG
-console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb://localhost/coffeehub");
-// mongoose.connect("mongodb://IlyaMeer:lobejune18@ds261429.mlab.com:61429/coffeehub")
+var url = process.env.DATABASEURL || "mongodb://localhost/coffeehub";
+mongoose.connect(url);
 
 
 

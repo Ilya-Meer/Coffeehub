@@ -1,17 +1,9 @@
 p.footer {
-  // width: 100%;
-  margin: 5rem auto 0 auto;
+  margin: 0 auto;
   padding: 20px;
+  position: relative;
+  top: 5rem;
   text-align: center;
   font-family: $font-main;
   color: #fff;
-  
-  // color: #454545;
-  // background-color: #fff;
-  // @media #{$tablet} {
-  //   position: absolute;
-  //   bottom: 0;
-  //   right:50%;
-  //   transform: translateX(50%);
-  // }
 }
