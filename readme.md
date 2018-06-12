@@ -40,5 +40,5 @@ Be sure to set process.env.DATABASEURL to your online db before deploying.
 * Body Parser   (HTTP body request parsing for Node)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.   
 MIT © [Ilya Meerovich](http://www.ilyameerovich.com)
