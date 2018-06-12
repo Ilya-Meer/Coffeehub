@@ -29,15 +29,16 @@ To deploy your own version, [mLab](https://mlab.com/) offers MongoDB database ho
 Be sure to set process.env.DATABASEURL to your online db before deploying. 
 
 ## Built With
-* Node          (Server)
-* Express       (Web Framework)
-* MongoDB       (Database)
-* Mongoose      (Object Modeling)
-* Passport      (Authentication)
-* SCSS          (CSS Preprocessor)
-* Gulp          (Task Runner)
-* Connect Flash (Flash Messages)
-* Body Parser   (HTTP body request parsing for Node)
+* Node                 (Server)
+* Express              (Web Framework)
+* MongoDB              (Database)
+* Mongoose             (Object Modeling)
+* Passport             (Authentication)
+* SCSS                 (CSS Preprocessor)
+* Gulp                 (Task Runner)
+* Connect Flash        (Flash Messages)
+* Body Parser          (HTTP body request parsing for Node)
+* Google Geogoding API (For geocoding based on user-submitted coffeeshop locations)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.   
