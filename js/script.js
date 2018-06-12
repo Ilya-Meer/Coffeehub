@@ -5,5 +5,4 @@ var mobileSize = true;
 menu.addEventListener('click', function(){
   mobileSize = !mobileSize;
   mobileSize === true ? navLinks.style.display = "none" : navLinks.style.display = "flex";
-  
 }); 
