@@ -11,26 +11,20 @@ var express                   = require('express'),
     Coffeeshop                = require('./models/coffeeshop'),
     Comment                   = require('./models/comment'),
     User                      = require('./models/user'),
-    // seedDB                    = require('./seeds'),
-    middleware                = require('./middleware');
-
-var app = express();
-
+    // seedDB                    = require('./seeds'),     <--- ENABLE THIS FOR SAMPLE DATA
+    middleware                = require('./middleware')
+    app                       = express();
 
 
-  
   // ROUTE REQUIRE STATEMENTS
 var coffeeshopRoutes = require('./routes/coffeeshops'),
     commentRoutes    = require('./routes/comments'),
     indexRoutes      = require('./routes/index');
 
 
-
   // APP CONFIG
 var url = process.env.DATABASEURL || "mongodb://localhost/coffeehub";
 mongoose.connect(url);
-
-
 
 app.use(express.static('public'));
 app.use(methodOverride("_method")); 
@@ -39,9 +33,7 @@ app.use(flash());
 app.set("view engine", "ejs");
 
 
-  // SEEDING THE DATABASE WITH SAMPLE DATA
-
-// seedDB();   < ---- TEMPORARILY DISABLED
+  // seedDB();   <--- ENABLE THIS FOR SAMPLE DATA
 
 
   // PASSPORT AUTHENTICATION CONFIG

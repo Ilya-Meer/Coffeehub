@@ -2,7 +2,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
-    // rename = require('gulp-rename'),
     uglify = require('gulp-uglify');
 
 gulp.task("sass", function(){

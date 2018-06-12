@@ -58,7 +58,6 @@ var middleware        = require('../middleware')
 
 
   // UPDATE ROUTE
-
   router.put('/coffeeshops/:id/comments/:comment_id', middleware.checkCommentOwnership, function(req, res){
     Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
       if(err) {
@@ -71,7 +70,6 @@ var middleware        = require('../middleware')
   
   
   // DESTROY ROUTE
-
 router.delete('/coffeeshops/:id/comments/:comment_id', middleware.checkCommentOwnership, function(req, res){
   Comment.findByIdAndRemove(req.params.comment_id, function(err){
     if(err) {
