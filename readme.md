@@ -4,11 +4,11 @@
 An app for people to share and review their favourite coffee/tea spots.
 
 ## Motivation
-This has been my most ambitious deep dive into backend JavaScript. I wanted to gain an understanding of how to write a basic full stack application combining a server, a database, along with a consisten design. Along the way, I also learned about and implemented RESTFUL routing principles, and used Passport for my authentication. There are many apps like this one already created, but any contribution is always welcome!
+This has been my most ambitious deep dive into backend JavaScript. I wanted to gain an understanding of how to write a basic full stack application combining a server, a database, along with a consistent design. Along the way, I also learned about and implemented RESTFUL routing principles, and used Passport for my authentication. There are many apps like this one already created, but any contribution is always welcome!
 
 ## Installation
 1. Run `npm install`
-2. Make sure that you have MongoDB installed and configured on your system
+2. Make sure that you have MongoDB installed and configured on your system.
 3. Set up a geocoding api key in [Google's Developer Console](https://developers.google.com/maps/documentation/geocoding/get-api-key)
     and store it in an environment variable with name GEOCODER_API_KEY.
 4. Run `node app.js` from project's root directory.
